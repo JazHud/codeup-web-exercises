@@ -7,24 +7,24 @@
 <body>
     <script>
         //make function names more descriptive ex. milesToKilometers or fahrenheitToCelsius//
-        function calculateCircumference(radius) {
-            const pi = 3.14159;
-            let circumference = 2 * pi * radius;
-            return circumference;
-        }
-        function calculateKm(miles) {
-            return 1.6 * miles;
-
-        }
-        function calculateLt(gallons) {
-            let Lt = 3.785412 * gallons;
-            return Lt;
-        }
-        function calculateFar(celsius) {
-            return ((1.8 * celsius) + 32);
-        }
-
-         let number = 20;
+        // function calculateCircumference(radius) {
+        //     const pi = 3.14159;
+        //     let circumference = 2 * pi * radius;
+        //     return circumference;
+        // }
+        // function calculateKm(miles) {
+        //     return 1.6 * miles;
+        //
+        // }
+        // function calculateLt(gallons) {
+        //     let Lt = 3.785412 * gallons;
+        //     return Lt;
+        // }
+        // function calculateFar(celsius) {
+        //     return ((1.8 * celsius) + 32);
+        // }
+        //
+        //  let number = 20;
         // if (number % 2 === 0) {
         //     console.log("That number is even.");
         // } else {
@@ -126,8 +126,8 @@
 //
 //         function upperCase(string) {
 //             return string.toUpperCase();
-//             // console.log(upperCase("Jazmine"));
-//         }
+//             console.log(upperCase("Jazmine"));
+//        }
 //
 //         function lowerCase(string) {
 //             return string.toLowerCase();
@@ -143,9 +143,9 @@
 //             return string.length;
 //         }
 //
-//         function characterIndex(char,string) {
-//             return string.indexOf(char);
-//         }
+        function characterIndex(char,string) {
+            return string.indexOf(char);
+        }
 //
 //         let numericString = "42";
 //         let Answer = 42;
@@ -166,26 +166,64 @@
 //         }
 //
 //         function isNumber(value){
-//             if (isNan(value) || type of value === "boolean"){
+//             if (isNan(value) || typeof value === "boolean"){
 //                 return false;
 //             } else {
 //                 return true;
 //             }
 //         }
-//
-//         function isNumber(value){
-//             return !(isNaN(value) || typeof value === "boolean");
-//         }
 
-            function multiplyingvalues (value1, value2) {
-                    if (isNaN(parseFloat(value1) || isNaN(parseFloat(value2))){
-                        return false;
-                    } else {
-                        return parseFloat(value1) * parseFloat(value2);
-                    }
+        function isNumber(value){
+            return !(isNaN(value) || typeof value === "boolean");
+        }
+//study below to understand statement fully
+            function multiply(value1, value2){
+                if (isNaN(parseFloat(value1)) || isNaN(parseFloat(value2))) {
+                    return false;
+                } else {
+                    return parseFloat(value1) * parseFloat(value2);
+                }
             }
-
+            //===============above is equal to below================
+            function multiply(value1, value2) {
+                if (isNumber(parseFloat(value1)) || isNaN(parseFloat(value2))){
+                    return false;
+                } else {
+                    return (parseFloat(value1) * parseFloat(value2));
+                }
+            }
+// Additional execution
+//             function milesToKilometers(miles){
+//                 return miles * 1.609;
+//             }
+//
+//             function areaOfTriangle(base, height) {
+//                 return ((base * height)/2);
+//             }
+//
+//             function volumeOfCube(edge) {
+//                 return edge ** 3;
+//             }
+//
+//             function divisibleByThreeOrSeven(value){
+//                 return (value % 7 === 0 || value % 3 === 0);
+//         }
+//
+//             function divisibleByThreeIsOdd(value) {
+//                 return (value % 2 !== 0 && value % 3 === 0);
+//             }
+//
+//             function fullName(first, middle, last) {
+//                 return `${first} ${middle} ${last}`
+//             }
+//
+//             function temperatureFahrenheit(temp, isFahrenheit) {
+//                 if (isFahrenheit === true){
+//                     return temp - 32 * 5/9;
+//             } else {
+//                     return (temp * 9 / 5) + 32;
+//                 }
+//           }
     </script>
-
 </body>
 </html>

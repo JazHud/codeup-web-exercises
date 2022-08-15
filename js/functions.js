@@ -10,7 +10,7 @@
  */
 
 function sayHello(name) {
-    return ("Hello " + name);
+    return ("Hello, " + name + "!");
 }
 console.log(sayHello)
 
@@ -56,7 +56,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function isTwo(number){
-    if (number == 2)
+    if (number === 2)
         return true;
     if (number !== 2);
         return false;
@@ -81,7 +81,7 @@ console.log(isTwo(random));
  */
 
  function calculateTip(percentage, bill){
-     return (percentage * bill);
+     return (percentage/100 * bill);
 }
 
 /**
@@ -90,11 +90,14 @@ console.log(isTwo(random));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
 let tipPercentage1 = prompt ("How much would you like to tip?");
 
 let totalBill = prompt( "What is the total of your bill today?")
 
-    alert("Your total pay is " + (tipPercentage1 * totalBill));
+let tip = calculateTip(tipPercentage1/100, totalBill)
+
+ alert("Your tip is $ " + tip.toFixed(2));
 
 
 /**
@@ -113,5 +116,5 @@ let totalBill = prompt( "What is the total of your bill today?")
  */
 
 function applyDiscount(price, discountPercentage){
-    return (price - (price * discountPercentage))
+    return price - (price * discountPercentage);
 }
