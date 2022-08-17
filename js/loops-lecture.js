@@ -22,12 +22,12 @@
 // }
 // ^^^^counts down from 100
 
-let number = 5;
-while (number < 200){
-    //number = number * 2;
-    number *= 2;
-    console.log(number);
-}
+// let number = 5;
+// while (number < 200){
+//     //number = number * 2;
+//     number *= 2;
+//     console.log(number);
+// }
 /// when console.log(number) is above the equation it wont compute past 200 and will include original number
 
 
@@ -62,18 +62,28 @@ while (number < 200){
 //         total = total + priceOfItem;
 //         alert("You total is now $" + total);
 //
-let total = 0;
-let priceOfItem;
-while (true){
-    let userInput = prompt(" Enter the price of your item:" +
-                            "\n Enter STOP when you are done");
-    if(userInput === "STOP") {
-        alert("Your final is now $" + total.toFixed(2));
-        break;
-    } else {
-        priceOfItem = parseFloat(userInput);
-        total = total + priceOfItem;
-        alert("Your total is " + total.toFixed(2));
-    }
-}
+// let total = 0;
+// let priceOfItem;
+// while (true){
+//     let userInput = prompt(" Enter the price of your item:" +
+//                             "\n Enter STOP when you are done");
+//     if(userInput === "STOP") {
+//         alert("Your final is now $" + total.toFixed(2));
+//         break;
+//     } else {
+//         priceOfItem = parseFloat(userInput);
+//         total = total + priceOfItem;
+//         alert("Your total is " + total.toFixed(2));
+//     }
+// }
 
+
+//vvvvvv------------------Do while loops----------------vvvvv
+
+let number = Math.ceil(Math.random() *6);
+let guess;
+console.log(guess);
+do {
+    guess = parseInt(prompt("Enter a number a number between 1 and 6"));
+} while (guess !== number);
+alert(`Your guess of ${guess} matches the number ${guess}!`);
