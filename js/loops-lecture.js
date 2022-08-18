@@ -80,10 +80,56 @@
 
 //vvvvvv------------------Do while loops----------------vvvvv
 
-let number = Math.ceil(Math.random() *6);
-let guess;
-console.log(guess);
-do {
-    guess = parseInt(prompt("Enter a number a number between 1 and 6"));
-} while (guess !== number);
-alert(`Your guess of ${guess} matches the number ${guess}!`);
+// let number = Math.ceil(Math.random() *6);
+// let guess;
+// console.log(guess);
+// do {
+//     guess = parseInt(prompt("Enter a number a number between 1 and 6"));
+// } while (guess !== number);
+// alert(`Your guess of ${guess} matches the number ${guess}!`);
+
+////-vvvvvvvv------------------------For Loops lecture-----------------vvvvvvvv
+//////for loops are shorthands for while loops
+//
+// //this is the loop control variable
+// //initialize it to a starting value <MUST
+// let count = 100;
+// // check the value of th eloop control variable in a conditional test <MUST
+// while (count >= 0){
+//     console.log(count);
+// // change the value of the loop control variable <MUST
+//     count = count - 1;
+// }
+//
+// for(let count = 100; count >= 0; count = count -1){
+//     console.log(count);
+// }
+//
+// //// i = count or whatever var name
+//
+// for (let i = 100; i >= 0; i--){
+//     console.log(count);
+//}
+//
+// let i = 0;
+// while (i < 100){
+//     console.log(i);
+//     i++;
+// }
+//
+// console.log("Outside the loop: " + i);
+//
+// let i = 0;
+// while (i < 100){
+//     i++;
+//     console.log(i);
+// }
+//
+// console.log("Inside the loop: " + i);
+// //technically dont loose 0 it is incremented before hand
+
+
+//cant alter the last incremented number as in while loop;
+for (let i =0; i < 100; i++){
+    console.log(i);
+}
