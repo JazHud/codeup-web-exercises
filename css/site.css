@@ -1,6 +1,7 @@
 body {      /* is a type selector */
     background-color: black;  /* declaration has a property and value*/
     color: white;         /*the entire body - } is a rule*/
+    margin-left: 5vw;
 }
 
 h1 {
@@ -9,8 +10,29 @@ h1 {
 
 h2 {
     border-bottom: 1px solid antiquewhite;
+    /* visibility: hidden;
+    display: none; */
 }
 
 .bold {
     font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+li.italic {
+    font-size: 1.1rem; /*!!!!!!!!!!rem = relative font height. aka 1.1 times the normal font::::: default txt size is 16px::::::rem adjusted with user settings relatively instead of px which is a fixed setting.*/
+}
+ /*ul li {*/
+ /*    color: lightblue;*/
+ /*}*/
+
+ /*ol li {*/
+ /*    color: chartreuse;*/
+ /*}*/
+
+h1.hidden {
+    display: none;
 }
