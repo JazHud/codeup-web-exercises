@@ -3,33 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Intro to HTML</title>
+    <link rel="stylesheet" href="../css/intro-to-css.css">
+    <link rel="stylesheet" href="../css/site.css">
     <style>
-        div {
-            text-align: center;
-            border: 2px solid black ;
-            border-radius: 7px;
-            padding: 5px;
-            padding-bottom: 10px;
-        }
+
     </style>
 </head>
 <body>
-    <div id="header">
+    <header>
         <h1>Jazmine &quot Jazie Fizzle &quot Hudson</h1>
         <h2>Full stack wannabe </h2>
         <img src="img/wallpaper800px.jpg" alt="cool wallpaper">
-    </div>
+    </header>
     <main>
         <section>
             <p>I am trying to be a full stack web developer with experience in Spring Boot, LAMP stack, Ruby on Rails, and React with Firebase.</p>
             <p>My speciality is ensuring a seamless flow of information between robust back ends and highly usable front ends.</p>
         </section>
         <section>
+            <h2>Languages</h2>
             <ul>
                 <li>JavaScript</li>
-                <li>Java</li>
+                <li class="bold">Java</li>
                 <li>PHP</li>
-                <li>Ruby</li>
+                <li class="bold">Ruby</li>
                 <li>SQL</li>
             </ul>
         </section>
@@ -46,7 +43,7 @@
         <section>
             <table>
                 <!--- <caption>Price</caption> -->
-                <h2>Price</h2>
+                <h2 id="prices">Price</h2>
                 <tr>
                     <th>Service</th>
                     <th>Price</th>
