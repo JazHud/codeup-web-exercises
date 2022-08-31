@@ -1,4 +1,48 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: peachpuff; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+body {
+    background-color: darkgoldenrod ;
+    background-image: url(/HTML/img/quotes.jpeg);
+    background-size: cover;
+    font-family: "Times New Roman", "Arial Black", sans-serif;
+
+}
+
+ul {
+    list-style-image: url("/HTML/img/GitHub-Mark-16px.png");
+}
+
+table, th, td {
+    border: 1px solid;
+    align: left;
+    width: 50%
+}
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+
+th {
+    height: 70px;
+}
+
+a:link {
+    color: chartreuse;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: hotpink;
 }
