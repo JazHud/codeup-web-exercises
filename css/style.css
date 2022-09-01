@@ -1,36 +1,45 @@
-.fancy-header {
-    color: peachpuff; /* single line comment */
-    text-decoration: underline;
-    text-align: center;
-}
 
 body {
     background-color: darkgoldenrod ;
     background-image: url(/HTML/img/quotes.jpeg);
+    background-repeat: no-repeat;
     background-size: cover;
-    font-family: "Times New Roman", "Arial Black", sans-serif;
+    background-position: center;
+    font-family: Lobster, cursive;
 
 }
 
-ul {
+h1.fancy-header {
+    /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+h2 {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+ul li {
     list-style-image: url("/HTML/img/GitHub-Mark-16px.png");
 }
 
-table, th, td {
+table {
+    /*margin:auto;*/
     border: 1px solid;
     align: left;
-    width: 50%
+    width: 50%;
+    font-size: 1.2rem;
+    /*border-collapse: collapse;*/
+
 }
 
-td {
+th, td {
+    border: 1px solid;
     height: 50px;
     vertical-align: bottom;
 }
 
-th {
-    height: 70px;
-}
-
+/*better to use hex numbers*/
 a:link {
     color: chartreuse;
 }
