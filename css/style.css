@@ -1,7 +1,7 @@
 
 body {
     background-color: darkgoldenrod ;
-    background-image: url(/HTML/img/quotes.jpeg);
+    background-image: url(/img/quotes.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -20,7 +20,7 @@ h2 {
 }
 
 ul li {
-    list-style-image: url("/HTML/img/GitHub-Mark-16px.png");
+    list-style-image: url("/img/GitHub-Mark-16px.png");
 }
 
 table {

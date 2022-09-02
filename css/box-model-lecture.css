@@ -1,0 +1,25 @@
+body {
+    margin: 20px;
+}
+
+#main {
+    box-sizing: border-box;
+    width: 400px;
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 15px; /*padding builds inward reducing the default 400px technically but the box still keeps the 400px including the box and padding*/
+    /*    margin-top: 75px;*/
+    /*    margin-left: 50px;*/
+}
+
+p {
+    box-sizing: border-box;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 15px 25px; /* 15px top & bottom 25px left & bottom */
+    /*margin: auto; !*is equal to margin-left: auto; and margin-right: auto together::::centering to the space available of the parent element *!*/
+    /*margin-bottom: 50px;*/
+    /*margin: 75px 100px 40px 40px; !*top - right - bottom - left*!*/
+    margin: 15px auto;
+}
