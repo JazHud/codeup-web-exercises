@@ -1,0 +1,36 @@
+#ipsum, #quenya, #pirate{
+    /*border: 1px solid black;*/
+    /*width: 25%;*/
+    /*float: left;*/
+    /*padding: 5px;*/
+    /*margin: 1rem;*/
+}
+
+#quenya {
+    position: relative;
+}
+
+img[src*="../img/codeup-logo-with-Codey.png"] {                      /* is applying to both images but the positioning is granted from parent if it has one*/
+    position: fixed;
+    top: 25%;
+    left: 0;
+    z-index: -1; /*z-index to control the order of the stack:::currently moves to the back*/
+}
+
+img[src*="fish"]{  /*this more specific rule will override but make sure to look at conflicting rules that is being inheriting. Therefore left: auto||unset is needed to replace the left:0 from plain a img above. */
+    position: absolute;
+    left: auto; /*left: unset*/
+    top: 0;
+    right: 0;
+}
+
+footer {
+    width: 20%;
+    margin: auto  /*needs width for the margin: auto to be executed*/
+}
+
+footer p {
+    text-align: center;
+    position: relative;
+    left: 5px;
+}
