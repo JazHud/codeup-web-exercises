@@ -1,0 +1,59 @@
+.flexbox  {
+    border: 1px solid black;
+    padding: 5px;
+    /*height: 70vh;*/
+    /*height: 900px;*/
+    display: flex; /*2.stops the natual stacking of div elements remove this property: value they will return to being stacked*/
+    /*flex-direction: row; /*row (left-right) is the default of the flex:: row-reverse(left-right)::column-back to the natual stacking of divs (top -bottom)::column-reverse (bottom-top)*/
+    /*flex-wrap: wrap; /*to keep all content visible on the page:::wrap-reverse wraps content upwards*/
+    flex-flow: row wrap; /*combines flex direction and flex-wrap*/
+
+
+    /*height property plus column wrap makes more of a table looking, giving a cross-axis left-right*/
+
+    justify-content: flex-start;
+    /*justify-content defines the distribution of space along the main axis of the container::: flex-end::space from end comes to the front, center::centers content, space-between:::space is equally spread out among the space, space-around:::equal sized margins all the way around except the far left and right ends, space-evenly:::distributes evenly across the container, stretch..  */
+
+    align-items: flex-start; /*align-items used to position flex items along the cross axis, flex-start:: upper left. flex-end::lower left. stretch:: fills that container height. center:: to vertically center within the container. baseline:: aline items by their text and not height. |flex-direction: column & align-items: flex-start:: stacks the elements to left. |flex-direction: column & align-items: flex-end:: stacks the elements to right. |flex-direction: column & align-items: stretch::: stacks and fills from left to right. |flex-direction: column; & align-items: center::: stacks and fills only in the center*/
+    /*align-content: space-between; !*align-content is used to control how extra cross-axis space is distributed between and around flex lines. It applies only to containers with multiple flex lines.... *!*/
+
+}
+
+.flex-item {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px
+}/*1. div elements(.flex-item)s are block elements that traditionally stack on top of each other*/
+
+.upsize {
+    font-size: 150%;
+}
+
+.topMargin {
+    margin-top: 30px;
+}
+
+.one {
+    align-self: flex-end;
+    order: 1;
+}
+.two {
+    align-self: center;
+}
+/*.five {*/
+/*    flex-grow: 1 !* will grow to take up remaining space that is left within the container as that items size AS LONG AS no other element has a flex-grow but it they do the number will dictate the amount of space to grown in. *!*/
+/*}*/
+/*.three {*/
+/*    flex-grow: 2;*/
+/*}*/
+.four {
+/*    flex-grow: 1;*/
+    align-self: center;
+}
+/*.five {*/
+/*    flex-grow: 0.5; */
+
+.six {
+    align-self: flex-end;
+    order: -1;
+}
