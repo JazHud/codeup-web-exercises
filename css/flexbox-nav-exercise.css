@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    background-color: rgb(193, 193,193);
+    font-family: 'Work Sans', sans-serif;
+}
+
+nav * {
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+}
+
+a:hover {
+   color: blue;
+}
+
+section:first-of-type {
+    margin: auto 0;
+}
+section:nth-of-type(2) {
+    font-family: Montserrat, sans-serif;
+    margin: auto;
+    font-size: 3em;
+    padding: .2em;
+}
+
+section:last-of-type {
+    display: flex;
+}
+
+section:last-of-type a {
+    align-self: center;
+}
