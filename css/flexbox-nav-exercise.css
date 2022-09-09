@@ -19,6 +19,8 @@ a:hover {
    color: blue;
 }
 
+section:first-of-type, section
+
 section:first-of-type {
     margin: auto 0;
 }
@@ -35,4 +37,5 @@ section:last-of-type {
 
 section:last-of-type a {
     align-self: center;
+    justify-content: flex-end;
 }

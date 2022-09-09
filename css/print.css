@@ -1,0 +1,15 @@
+body {
+    background-color: white;
+    color: black;
+
+}
+
+/* after link on HTML page media="print" css will make the webpage more suitable for printing.*/
+
+@media screen and (max-width: 760px){
+    div {
+        flex-direction: column;
+    }
+}
+
+/*to adjust the selected elements into an column when the screen shrinks*/

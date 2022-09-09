@@ -36,3 +36,7 @@ li.italic {
 h1.hidden {
     display: none;
 }
+
+div {
+    display: flex;
+}
