@@ -1,0 +1,13 @@
+.hotpink {
+    border-color: hotpink;
+    color: hotpink;
+}
+
+.hotpink:hover {
+    background-color: hotpink !important;
+    color: white !important;
+}
+
+/*#main-heading {*/
+/*    background-image: url("../img/pexels-digital-buggu-171198.jpg)");*/
+/*}*/
