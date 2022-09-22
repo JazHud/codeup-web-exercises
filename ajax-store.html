@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+    <style>
+        #insertProducts {
+            margin: 10px auto;
+            border: 5px solid blueviolet;
+            table-layout: auto;
+        }
+
+        th{
+            margin: 10px auto;
+            border: 5px ridge blueviolet;
+            padding: 15px;
+            width: 25%;
+        }
+
+        #products {
+            margin: 10px auto;
+            border: 5px ridge blueviolet;
+            padding: 15px;
+            width: 25%;
+        }
+
+    </style>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+
+    </thead>
+    <tbody id="insertProducts"></tbody>
+    <section>
+        <button>Refresh</button>
+    </section>
+</table>
+
+<script src="js/jquery-3.6.1.min.js"></script>
+
+<script>
+$(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+$('button').on('click', function(){
+$.ajax("data/inventory.json").done(function(data) {
+    data.forEach(function(inventory) {
+    console.log(inventory);
+    $("#insertProducts").append(
+        `<tr class="insertProducts">
+        <td>${inventory.title}</td>
+        <td>${inventory.quantity}</td>
+        <td>${inventory.price}</td>
+        <td>${inventory.categories}</td>
+        </tr>`
+    )
+})});
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})});
+</script>
+
+</body>
+</html>

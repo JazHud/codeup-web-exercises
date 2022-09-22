@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to AJAX</title>
+    <style>
+        #murals-info {
+            margin: 10px auto;
+            border: 5px ridge blueviolet;
+            padding: 15px;
+            width: 25%;
+            text-align: center;
+        }
+        #murals-info:hover {
+            cursor: pointer;
+            background-color: aliceblue;
+        }
+        #murals-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid darkgray;
+            padding: 5px;
+            width: 330px;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--having the ajax info being called from an event-->
+<section id="murals-info">
+    <p>Murals Information</p>
+</section>
+<section id="murals-cards">
+
+</section>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+
+
+  ///the API data below is sending out the request for the parameter of "data" for information in this case 4 arrays this case is stored locally, console.log to view arrays
+  // $.ajax("data/murals.json").done(function(data){
+  //   console.log(data);
+  // });
+
+
+  <!--having the ajax info being called from an event-->
+  // $("section").on('click', function (){
+  //     $.ajax("data/murals.json").done(function(data){
+  //         console.log(data);
+  //     });
+  // })
+//API data is an array of objects so you can add data[0] in console.log to find the array at 0
+  //array methods being applied to get each array
+  // $("section").on('click', function (){
+  //     $.ajax("data/murals.json").done(function(data) {
+  //         data.forEach(function (mural) {
+  //             console.log(mural);
+  //         });
+  //     });
+  // });
+  //to find only the titles of the arrays
+  $("#murals-info").on('click', function (){
+      $.ajax("data/murals.json").done(function(data) {
+          data.forEach(function (mural) {
+              //console.log(mural) //sometimes it's good to just keep this here to see data clearly to fine title or whatever needed aka properties of the object.
+              console.log(mural.artwork_title ? mural.artwork_title : "Untitled"); //<<<if there is a title push title if not push untitled also the shorthand works **HINT(mural.artwork_title ?? "Untitled) (only works if the first item does have a title
+              console.log(mural.artist_credit);
+              ///below to show data from the API onto the page
+              let title = mural.artwork_title ?? "Untitled";
+              $("#murals-cards").append(
+                  `<artical class='card'>
+                    <p>${title}</p>
+                    <p>${mural.artist_credit}</p>
+                    </artical>`
+              );
+
+          });
+      });
+  });
+</script>
+</body>
+</html>
