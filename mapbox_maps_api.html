@@ -38,9 +38,12 @@
         });
         map.setZoom(10);
         map.setCenter([-97.2929, 32.8386]);
-        const codeMarker = new mapboxgl.Marker()
+        const favMarker = new mapboxgl.Marker()
             .setLngLat([-97.2929, 32.8386])
             .addTo(map);
+        const favPopup = new mapboxgl.Popup()
+            .setHTML('<p class="mt-3">Texas RoadHouse</p>');
+        favMarker.setPopup(favPopup);
 
     </script>
 </body>
