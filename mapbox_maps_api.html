@@ -24,7 +24,6 @@
 
 
 
-
     <script>
         mapboxgl.accessToken = MAPBOX_API_TOKEN;
         const map = new mapboxgl.Map({
@@ -39,6 +38,9 @@
         });
         map.setZoom(10);
         map.setCenter([-97.2929, 32.8386]);
+        const codeMarker = new mapboxgl.Marker()
+            .setLngLat([-97.2929, 32.8386])
+            .addTo(map);
 
     </script>
 </body>
