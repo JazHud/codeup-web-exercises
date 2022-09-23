@@ -66,8 +66,9 @@ $.ajax("data/inventory.json").done(function(data) {
         `<tr class="insertProducts">
         <td>${inventory.title}</td>
         <td>${inventory.quantity}</td>
-        <td>${inventory.price}</td>
-        <td>${inventory.categories}</td>
+        <td>$${inventory.price}</td>
+        <td>${inventory.categories.join(', ')}</td>
+<!--.join(', ') to gives spaces the template literal is removing space but keeps commas -->
         </tr>`
     )
 })});

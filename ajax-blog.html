@@ -13,14 +13,15 @@
     </div>
 <script src="js/jquery-3.6.1.min.js"></script>
 <script>
+
 $(function(){
-    $.ajax("data/blog.json").done(function(data){
+    $.ajax("data/blog.json").done(function (data){
         data.forEach(function(blog){
         console.log(data);
         $(".post").append(
             `<h2>${blog.title}</h2>
             <section>${blog.date}</section>
-            <section>${blog.categories}</section>
+            <section>${blog.categories.join(', ')}</section>
             <p>${blog.content}</p>`
         )
         })});
