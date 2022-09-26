@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Texas Roadhouse",
+    "location": "-94.0911, 33.4555",
+    "cost": "$$",
+    "info": [
+      "Southern style food"
+    ],
+    "rating": "5/5"
+  }, {
+    "name": "Texas De Brazil",
+    "location": "-115.175347, 36.070135",
+    "cost": "$$$",
+    "info": [
+      "Brazilian steakhouse"
+    ],
+    "rating": "4/5"
+  }, {
+  "name": "Naamans",
+  "location": "-94.0425, 33.4748",
+  "cost": "$$$",
+  "info": [
+    "BBQ"
+  ],
+  "rating": "4/5"
+}
+
+]
