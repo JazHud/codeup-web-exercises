@@ -1,99 +1,74 @@
-const prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
-let output = '';
-
-
-//one parameter (price => { ::::two parameters (price, index) => {
-prices.forEach((price, index, array) => {
-    const tax = (price *0.0825).toFixed(2);
-    const total = (price + parseFloat(tax)).toFixed(2);
-    output += `<p id="price-${index+1}">Item number ${index +1} Price $${price}. Tax $${tax}. Total $${total}</p>` //<p id="price-${index+1}"> TO CREATE A NEW ID FOR EACH BY ADDING +1
-    console.log(output);
-    $("div").html(output);
-    if (index === array.length-1) {
-        $("div").append("<p>That's it!!!</p>");
-    }
-});
-////////find the error above
-//
-// const pricesAfterTax = prices.map(price =>{
-//     const tax = (price * 0.0825).toFixed(2);
-//     const total = (price + parseFloat((tax))).toFixed(2);
-//     return parseFloat(total);
-// });
-// console.log(prices);
-// console.log(pricesAfterTax);
-//
-// const doubledArray =prices.map(price => price * 2); ////.map is going through each array and *2
-// console.log(doubledArray);
-//
-
-// const dessert = ['sherbet', 'whiskey cake', 'cupcake', 'eclair'];
-// const eatingDessert = dessert.map(dessert => `Eating ${dessert} yummmmm`);
-// eatingDessert.forEach(element => {
-//     $("div").append(`<p>${element}</p>`)
-// });
-
-const cars = [
+const users = [
     {
-        make: "Honda",
-        model: "Civic",
-        mileage: 10428
+        id: 1,
+        name: 'ryan',
+        email: 'ryan@codeup.com',
+        languages: ['clojure', 'javascript'],
+        yearsOfExperience: 5
     },
     {
-        make: "Toyota",
-        model: "Corolla",
-        mileage: 9425
+        id: 2,
+        name: 'luis',
+        email: 'luis@codeup.com',
+        languages: ['java', 'scala', 'php'],
+        yearsOfExperience: 6
     },
     {
-        make: "Ford",
-        model: "Mustang",
-        mileage: 2567
+        id: 3,
+        name: 'zach',
+        email: 'zach@codeup.com',
+        languages: ['javascript', 'bash'],
+        yearsOfExperience: 7
     },
     {
-        make: "Audi",
-        model: "A3",
-        mileage: 14500
+        id: 4,
+        name: 'fernando',
+        email: 'fernando@codeup.com',
+        languages: ['java', 'php', 'sql'],
+        yearsOfExperience: 8
     },
     {
-        make: "Mazda",
-        model: "3",
-        mileage: 11248
+        id: 5,
+        name: 'justin',
+        email: 'justin@codeup.com',
+        languages: ['html', 'css', 'javascript', 'php'],
+        yearsOfExperience: 9
     }
 ];
 
-const milages = cars.map(car => car.mileage);
-console.log(milages);
-const newObject = cars.map(car => {
-    car.newProp = 'new property';
-    delete car.mileage; ///delete removes that of object from the array (delete is a global scope
-    // return car;
+// Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+// console.log(users);
+let threeLangs = users.filter(function (users){
+    return users.languages.length >= 3;
 });
+console.log(threeLangs);
 
-console.log(cars[0]); ///new property is a new object added to the array
-////FIND THE ERROR
-const under10K = cars.filter(car => car.mileage < 10000);
-//// below is called object deconstruction
-under10K.forEach(({make, model, mileage}, index) => {
-    output += `<p>Car number ${index + 1}:I found a ${make} ${model} with ${mileage} miles</p>`;
-    $(".output").html(output);
+//     Use .map to create an array of strings where each element is a user's email address
+const email = users.map(function (emails) {
+    return emails.email;
 });
+console.log(email);
 
+// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+const totalYears = users.reduce(function (yrsAdd, yrs) {
+    return yrs.yearsOfExperience + yrsAdd;
+},0);
+let averageYears = totalYears/users.length;
+console.log(averageYears);
 
-prices.filter(price => price < 10)
-    .map(price => {
-        const tax = (price * 0.0825).toFixed(2);
-        const total = (price + parseFloat(tax)).toFixed(2);
-        return parseFloat(total);
-    }).forEach(price =>                         ////.forEach makes the return value come back undefined if you want to declare the variable and return that value
-        $("div").append(`<p> ${price}</p>`));
+//     Use .reduce to get the longest email from the list of users.
+let longEmail = users.reduce(function (lngEmail, user) {
+    if(lngEmail.length < user.email.length){
+        return user.email;
+    } else {
+        return user;
+    }
+}); console.log(longEmail)
+//     Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-// console.log(under10DollarsWithTax)
-
-
-/// finish function from javie
-const totalCost = prices.reduce(function(total, itemPrice, index){
-    console.log(`The index is ${index} the total is ${total}, the item price is ${itemPrice});
-   `);
-    return total += itemPrice;
-})
-    $(".output").append(`<p> The total is ${totalCost}</p>`);
+let userNames = users.reduce(function (names){
+    return `${users.name}`
+},'');
+console.log(userNames);
+// Bonus
+// Use .reduce to get the unique list of languages from the list of users.
