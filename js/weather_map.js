@@ -44,13 +44,18 @@ $(function (){
             $(".weatherSearch").remove();
             const favsMarker = new mapboxgl.Marker().setLngLat([latLng.lng, latLng.lat]).addTo(map);
 
+            $(".currentWeather").empty();
+            getCurrentForecastAndPrint(latLng.lng, latLng.lat);
+
+
+
             map.flyTo({center: latLng, zoom: 9});
 
 
             })
     })
 
-            //!!!!!console.log(forcast(citySearchData))
+            // console.log(forcast(citySearchData))
             // $(".submitForm").on("dragend", () => ([marker.getLngLat().lat, marker.getLngLat().lng]));
 
 
@@ -174,7 +179,6 @@ $(function (){
             console.log(data.main.temp);
             console.log(data.wind.speed);
             console.log(data.weather[0].description)
-
             $(".currentWeather").append
             (`</div>
             <div class="card border-warning mb-3 text-center" style="max-width: 100%">
