@@ -1,0 +1,47 @@
+#map {
+    position: absolute;
+    height: 875px;
+    width: 1600px;
+    max-width: inherit;
+    margin-top: 3vh;
+    z-index: -1;
+    border: solid 10px navy;
+}
+
+.map{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 32vw;
+}
+body {
+    margin: auto;
+    padding: 0;
+    min-width: 1420px;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    background-color: #040844;
+}
+
+.page-wrapper {
+
+}
+
+.currentWeather {
+    margin-top: 5vh;
+
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-content: center;*/
+}
+
+.dayCards {
+    height: 875px;
+    overflow-y: scroll;
+}
+
+.update {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
